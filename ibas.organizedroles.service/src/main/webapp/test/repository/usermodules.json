@@ -1,0 +1,9 @@
+[
+  {
+    "Id": "18199a3e-29a7-4d43-ab4b-4de5454eb0a4",
+    "Name": "OrganizedRoles",
+    "Category": "",
+    "Address": ".../",
+    "Repository": "http://localhost:8080/organizedroles/services/rest/data"
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "organizedroles": "${Domain.getDescription()}",
+  "organizedroles_icon": "",
+  "organizedroles_func_organizationalstructure": "组织-结构",
+  "organizedroles_app_organizationalstructure_list": "组织-结构列表",
+  "organizedroles_app_organizationalstructure_choose": "组织-结构选择",
+  "organizedroles_app_organizationalstructure_view": "组织-结构查看",
+  "organizedroles_app_organizationalstructure_edit": "组织-结构编辑",
+  "organizedroles_func_ownership": "数据权限",
+  "organizedroles_app_ownership_list": "数据权限列表",
+  "organizedroles_app_ownership_choose": "数据权限选择",
+  "organizedroles_app_ownership_view": "数据权限查看",
+  "organizedroles_app_ownership_edit": "数据权限编辑",
+  "organizedroles_func_role": "角色",
+  "organizedroles_app_role_list": "角色列表",
+  "organizedroles_app_role_choose": "角色选择",
+  "organizedroles_app_role_view": "角色查看",
+  "organizedroles_app_role_edit": "角色编辑",
+  "organizedroles_closing_delimiter": "----结束----"
+}
