@@ -8,7 +8,7 @@
 
 import * as ibas from "ibas/index";
 import * as bo from "../../borep/bo/index";
-import { BORepositoryInitialFantasy } from "../../borep/BORepositories";
+import { BORepositoryOrganizedRoles } from "../../borep/BORepositories";
 
 /** 应用-角色 */
 export class RoleEditApp extends ibas.BOEditApplication<IRoleEditView, bo.Role> {
@@ -52,7 +52,7 @@ export class RoleEditApp extends ibas.BOEditApplication<IRoleEditView, bo.Role> 
             let criteria: ibas.ICriteria = arguments[0].criteria();
             if (!ibas.objects.isNull(criteria) && criteria.conditions.length > 0) {
                 // 有效的查询对象查询
-                let boRepository: BORepositoryInitialFantasy = new BORepositoryInitialFantasy();
+                let boRepository: BORepositoryOrganizedRoles = new BORepositoryOrganizedRoles();
                 boRepository.fetchRole({
                     criteria: criteria,
                     onCompleted(opRslt: ibas.IOperationResult<bo.Role>): void {
@@ -87,7 +87,7 @@ export class RoleEditApp extends ibas.BOEditApplication<IRoleEditView, bo.Role> 
     /** 保存数据 */
     protected saveData(): void {
         let that: this = this;
-        let boRepository: BORepositoryInitialFantasy = new BORepositoryInitialFantasy();
+        let boRepository: BORepositoryOrganizedRoles = new BORepositoryOrganizedRoles();
         boRepository.saveRole({
             beSaved: this.editData,
             onCompleted(opRslt: ibas.IOperationResult<bo.Role>): void {

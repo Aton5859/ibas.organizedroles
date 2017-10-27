@@ -8,7 +8,7 @@
 
 import * as ibas from "ibas/index";
 import * as bo from "../../borep/bo/index";
-import { BORepositoryInitialFantasy } from "../../borep/BORepositories";
+import { BORepositoryOrganizedRoles } from "../../borep/BORepositories";
 import { OrganizationalStructureEditApp } from "./OrganizationalStructureEditApp";
 
 /** 查看应用-组织-结构 */
@@ -64,7 +64,7 @@ export class OrganizationalStructureViewApp extends ibas.BOViewService<IOrganiza
             // 添加查询条件
 
         }
-        let boRepository: BORepositoryInitialFantasy = new BORepositoryInitialFantasy();
+        let boRepository: BORepositoryOrganizedRoles = new BORepositoryOrganizedRoles();
         boRepository.fetchOrganizationalStructure({
             criteria: criteria,
             onCompleted(opRslt: ibas.IOperationResult<bo.OrganizationalStructure>): void {

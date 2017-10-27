@@ -19,6 +19,7 @@ import {
     BODocumentLine,
     BOSimple,
     BOSimpleLine,
+    emAuthoriseType
 } from "ibas/index";
 import {
     IOwnership,

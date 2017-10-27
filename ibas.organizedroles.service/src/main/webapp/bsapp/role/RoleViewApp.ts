@@ -8,7 +8,7 @@
 
 import * as ibas from "ibas/index";
 import * as bo from "../../borep/bo/index";
-import { BORepositoryInitialFantasy } from "../../borep/BORepositories";
+import { BORepositoryOrganizedRoles } from "../../borep/BORepositories";
 import { RoleEditApp } from "./RoleEditApp";
 
 /** 查看应用-角色 */
@@ -64,7 +64,7 @@ export class RoleViewApp extends ibas.BOViewService<IRoleViewView> {
             // 添加查询条件
 
         }
-        let boRepository: BORepositoryInitialFantasy = new BORepositoryInitialFantasy();
+        let boRepository: BORepositoryOrganizedRoles = new BORepositoryOrganizedRoles();
         boRepository.fetchRole({
             criteria: criteria,
             onCompleted(opRslt: ibas.IOperationResult<bo.Role>): void {

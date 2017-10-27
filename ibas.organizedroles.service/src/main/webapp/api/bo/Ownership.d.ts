@@ -18,7 +18,8 @@ import {
     IBODocument,
     IBODocumentLine,
     IBOSimple,
-    IBOSimpleLine
+    IBOSimpleLine,
+    emAuthoriseType
 } from "ibas/index";
 import {
 

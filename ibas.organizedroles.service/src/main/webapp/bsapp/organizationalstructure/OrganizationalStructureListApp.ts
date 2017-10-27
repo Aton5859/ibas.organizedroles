@@ -8,8 +8,8 @@
 
 import * as ibas from "ibas/index";
 import * as bo from "../../borep/bo/index";
-import { BORepositoryInitialFantasy } from "../../borep/BORepositories";
-import { DataConverter4if } from "../../borep/DataConverters";
+import { BORepositoryOrganizedRoles } from "../../borep/BORepositories";
+import { DataConverter4or } from "../../borep/DataConverters";
 import { OrganizationalStructureViewApp } from "./OrganizationalStructureViewApp";
 import { OrganizationalStructureEditApp } from "./OrganizationalStructureEditApp";
 
@@ -45,7 +45,7 @@ export class OrganizationalStructureListApp extends ibas.BOListApplication<IOrga
     protected fetchData(criteria: ibas.ICriteria): void {
         this.busy(true);
         let that: this = this;
-        let boRepository: BORepositoryInitialFantasy = new BORepositoryInitialFantasy();
+        let boRepository: BORepositoryOrganizedRoles = new BORepositoryOrganizedRoles();
         boRepository.fetchOrganizationalStructure({
             criteria: criteria,
             onCompleted(opRslt: ibas.IOperationResult<bo.OrganizationalStructure>): void {
@@ -129,7 +129,7 @@ export class OrganizationalStructureListApp extends ibas.BOListApplication<IOrga
             onCompleted(action: ibas.emMessageAction): void {
                 if (action === ibas.emMessageAction.YES) {
                     try {
-                        let boRepository: BORepositoryInitialFantasy = new BORepositoryInitialFantasy();
+                        let boRepository: BORepositoryOrganizedRoles = new BORepositoryOrganizedRoles();
                         let saveMethod: Function = function (beSaved: bo.OrganizationalStructure): void {
                             boRepository.saveOrganizationalStructure({
                                 beSaved: beSaved,
@@ -172,7 +172,7 @@ export class OrganizationalStructureListApp extends ibas.BOListApplication<IOrga
         return [
             new ibas.BOListServiceProxy({
                 data: this.view.getSelecteds(),
-                converter: new DataConverter4if(),
+                converter: new DataConverter4or(),
             })
         ];
     }

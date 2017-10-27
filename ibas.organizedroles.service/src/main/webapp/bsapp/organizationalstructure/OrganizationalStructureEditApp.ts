@@ -8,7 +8,7 @@
 
 import * as ibas from "ibas/index";
 import * as bo from "../../borep/bo/index";
-import { BORepositoryInitialFantasy } from "../../borep/BORepositories";
+import { BORepositoryOrganizedRoles } from "../../borep/BORepositories";
 
 /** 应用-组织-结构 */
 export class OrganizationalStructureEditApp extends ibas.BOEditApplication<IOrganizationalStructureEditView, bo.OrganizationalStructure> {
@@ -63,7 +63,7 @@ export class OrganizationalStructureEditApp extends ibas.BOEditApplication<IOrga
             let criteria: ibas.ICriteria = arguments[0].criteria();
             if (!ibas.objects.isNull(criteria) && criteria.conditions.length > 0) {
                 // 有效的查询对象查询
-                let boRepository: BORepositoryInitialFantasy = new BORepositoryInitialFantasy();
+                let boRepository: BORepositoryOrganizedRoles = new BORepositoryOrganizedRoles();
                 boRepository.fetchOrganizationalStructure({
                     criteria: criteria,
                     onCompleted(opRslt: ibas.IOperationResult<bo.OrganizationalStructure>): void {
@@ -98,7 +98,7 @@ export class OrganizationalStructureEditApp extends ibas.BOEditApplication<IOrga
     /** 保存数据 */
     protected saveData(): void {
         let that: this = this;
-        let boRepository: BORepositoryInitialFantasy = new BORepositoryInitialFantasy();
+        let boRepository: BORepositoryOrganizedRoles = new BORepositoryOrganizedRoles();
         boRepository.saveOrganizationalStructure({
             beSaved: this.editData,
             onCompleted(opRslt: ibas.IOperationResult<bo.OrganizationalStructure>): void {

@@ -8,7 +8,7 @@
 
 import * as ibas from "ibas/index";
 import * as bo from "../../borep/bo/index";
-import { BORepositoryInitialFantasy } from "../../borep/BORepositories";
+import { BORepositoryOrganizedRoles } from "../../borep/BORepositories";
 import { OwnershipEditApp } from "./OwnershipEditApp";
 
 /** 查看应用-数据权限 */
@@ -64,7 +64,7 @@ export class OwnershipViewApp extends ibas.BOViewService<IOwnershipViewView> {
             // 添加查询条件
 
         }
-        let boRepository: BORepositoryInitialFantasy = new BORepositoryInitialFantasy();
+        let boRepository: BORepositoryOrganizedRoles = new BORepositoryOrganizedRoles();
         boRepository.fetchOwnership({
             criteria: criteria,
             onCompleted(opRslt: ibas.IOperationResult<bo.Ownership>): void {
