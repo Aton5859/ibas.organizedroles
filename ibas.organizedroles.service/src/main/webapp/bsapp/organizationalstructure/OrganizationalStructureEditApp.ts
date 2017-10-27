@@ -8,6 +8,7 @@
 
 import * as ibas from "ibas/index";
 import * as bo from "../../borep/bo/index";
+import * as ia from "../../3rdparty/initialfantasy/index";
 import { BORepositoryOrganizedRoles } from "../../borep/BORepositories";
 
 /** 应用-组织-结构 */
@@ -209,12 +210,12 @@ export class OrganizationalStructureEditApp extends ibas.BOEditApplication<IOrga
     /** 选则-组织 */
     chooseOrganization(): void {
         let that: this = this;
-        ibas.servicesManager.runChooseService<bo.Organization>({
-            boCode: bo.Organization.BUSINESS_OBJECT_CODE,
+        ibas.servicesManager.runChooseService<ia.IOrganization>({
+            boCode: ia.BO_CODE_ORGANIZATION,
             criteria: [
-                new ibas.Condition(bo.Organization.PROPERTY_ACTIVATED_NAME, ibas.emConditionOperation.EQUAL, "Y")
+                new ibas.Condition("activated", ibas.emConditionOperation.EQUAL, "Y")
             ],
-            onCompleted(selecteds: ibas.List<bo.Organization>): void {
+            onCompleted(selecteds: ibas.List<ia.IOrganization>): void {
                 that.editData.organization = selecteds.firstOrDefault().code;
             }
         });
@@ -239,12 +240,12 @@ export class OrganizationalStructureEditApp extends ibas.BOEditApplication<IOrga
     /** 选则-经理 */
     chooseManager(): void {
         let that: this = this;
-        ibas.servicesManager.runChooseService<bo.User>({
-            boCode: bo.User.BUSINESS_OBJECT_CODE,
+        ibas.servicesManager.runChooseService<ia.IUser>({
+            boCode: ia.BO_CODE_USER,
             criteria: [
-                new ibas.Condition(bo.User.PROPERTY_ACTIVATED_NAME, ibas.emConditionOperation.EQUAL, "Y")
+                new ibas.Condition("activated", ibas.emConditionOperation.EQUAL, "Y")
             ],
-            onCompleted(selecteds: ibas.List<bo.User>): void {
+            onCompleted(selecteds: ibas.List<ia.IUser>): void {
                 that.editData.manager = selecteds.firstOrDefault().code;
             }
         });
@@ -336,13 +337,13 @@ export class OrganizationalStructureEditApp extends ibas.BOEditApplication<IOrga
     /** 选择-角色成员 */
     choooseRoleMember(caller: bo.RoleMember): void {
         let that: this = this;
-        ibas.servicesManager.runChooseService<bo.User>({
+        ibas.servicesManager.runChooseService<ia.IUser>({
             caller: caller,
-            boCode: bo.User.BUSINESS_OBJECT_CODE,
+            boCode: ia.BO_CODE_USER,
             criteria: [
-                new ibas.Condition(bo.Role.PROPERTY_ACTIVATED_NAME, ibas.emConditionOperation.EQUAL, "Y")
+                new ibas.Condition("activated", ibas.emConditionOperation.EQUAL, "Y")
             ],
-            onCompleted(selecteds: ibas.List<bo.User>): void {
+            onCompleted(selecteds: ibas.List<ia.IUser>): void {
                 // 获取触发的对象
                 if (ibas.objects.isNull(that.editOrganizationalRole)) {
                     return;
