@@ -7,7 +7,7 @@
  */
 
 import * as ibas from "ibas/index";
-import { utils } from "openui5/typings/ibas.utils";
+import * as openui5 from "openui5/index";
 import * as bo from "../../../borep/bo/index";
 import { IOrganizationalStructureEditView } from "../../../bsapp/organizationalstructure/index";
 
@@ -125,7 +125,7 @@ export class OrganizationalStructureEditView extends ibas.BOEditView implements 
                         press: function (): void {
                             that.fireViewEvents(that.removeOrganizationalRoleEvent,
                                 // 获取表格选中的对象
-                                utils.getTableSelecteds<bo.OrganizationalRole>(that.tableOrganizationalRole)
+                                openui5.utils.getTableSelecteds<bo.OrganizationalRole>(that.tableOrganizationalRole)
                             );
                         }
                     })
@@ -154,7 +154,7 @@ export class OrganizationalStructureEditView extends ibas.BOEditView implements 
             ],
             rowSelectionChange: function (): void {
                 that.fireViewEvents(that.selectedOrganizationalRoleEvent,
-                    utils.getTableSelecteds<bo.RoleMember>(that.tableOrganizationalRole).firstOrDefault()
+                    openui5.utils.getTableSelecteds<bo.RoleMember>(that.tableOrganizationalRole).firstOrDefault()
                 );
             }
         });
@@ -177,7 +177,7 @@ export class OrganizationalStructureEditView extends ibas.BOEditView implements 
                         icon: "sap-icon://less",
                         press: function (): void {
                             that.fireViewEvents(that.removeRoleMemberEvent,
-                                utils.getTableSelecteds<bo.RoleMember>(that.tableRoleMember)
+                                openui5.utils.getTableSelecteds<bo.RoleMember>(that.tableRoleMember)
                             );
                         }
                     })
@@ -287,7 +287,7 @@ export class OrganizationalStructureEditView extends ibas.BOEditView implements 
         // 新建时：禁用删除，
         if (data.isNew) {
             if (this.page.getSubHeader() instanceof sap.m.Toolbar) {
-                utils.changeToolbarDeletable(<sap.m.Toolbar>this.page.getSubHeader(), false);
+                openui5.utils.changeToolbarDeletable(<sap.m.Toolbar>this.page.getSubHeader(), false);
             }
         }
     }
@@ -298,7 +298,7 @@ export class OrganizationalStructureEditView extends ibas.BOEditView implements 
     showOrganizationalStructure(data: bo.OrganizationalStructure): void {
         this.form.setModel(new sap.ui.model.json.JSONModel(data));
         // 监听属性改变，并更新控件
-        utils.refreshModelChanged(this.form, data);
+        openui5.utils.refreshModelChanged(this.form, data);
         // 改变视图状态
         this.changeViewStatus(data);
     }
@@ -306,12 +306,12 @@ export class OrganizationalStructureEditView extends ibas.BOEditView implements 
     showOrganizationalRoles(datas: bo.OrganizationalRole[]): void {
         this.tableOrganizationalRole.setModel(new sap.ui.model.json.JSONModel({ rows: datas }));
         // 监听属性改变，并更新控件
-        utils.refreshModelChanged(this.tableOrganizationalRole, datas);
+        openui5.utils.refreshModelChanged(this.tableOrganizationalRole, datas);
     }
     /** 显示数据 */
     showRoleMembers(datas: bo.RoleMember[]): void {
         this.tableRoleMember.setModel(new sap.ui.model.json.JSONModel({ rows: datas }));
         // 监听属性改变，并更新控件
-        utils.refreshModelChanged(this.tableRoleMember, datas);
+        openui5.utils.refreshModelChanged(this.tableRoleMember, datas);
     }
 }
