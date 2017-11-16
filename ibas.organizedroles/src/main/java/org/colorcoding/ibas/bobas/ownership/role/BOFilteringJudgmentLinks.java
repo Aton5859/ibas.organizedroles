@@ -5,22 +5,22 @@ import java.util.List;
 import org.colorcoding.ibas.bobas.core.fields.IFieldData;
 import org.colorcoding.ibas.bobas.core.fields.IFieldDataDb;
 import org.colorcoding.ibas.bobas.core.fields.IManageFields;
+import org.colorcoding.ibas.bobas.data.ArrayList;
 import org.colorcoding.ibas.bobas.data.emConditionRelationship;
 import org.colorcoding.ibas.bobas.expression.BOJudgmentLink;
 import org.colorcoding.ibas.bobas.expression.IPropertyValueOperator;
 import org.colorcoding.ibas.bobas.expression.IValueOperator;
-import org.colorcoding.ibas.bobas.expression.JudgmentLinkItem;
 import org.colorcoding.ibas.bobas.expression.JudgmentLinkException;
+import org.colorcoding.ibas.bobas.expression.JudgmentLinkItem;
 import org.colorcoding.ibas.bobas.expression.JudmentOperation;
 import org.colorcoding.ibas.bobas.i18n.I18N;
-import org.colorcoding.ibas.bobas.data.ArrayList;
 import org.colorcoding.ibas.initialfantasy.bo.bofiltering.IBOFilteringCondition;
 
 public class BOFilteringJudgmentLinks extends BOJudgmentLink {
 
 	public void parsingConditions(List<IBOFilteringCondition> conditions) {
 		// 判断无条件
-		if (conditions != null && conditions.size() == 0) {
+		if (conditions == null || conditions.size() == 0) {
 			return;
 		}
 		ArrayList<JudgmentLinkItem> jLinkItems = new ArrayList<JudgmentLinkItem>();
