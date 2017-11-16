@@ -101,7 +101,7 @@ export class OwnershipChooseView extends ibas.BOChooseView implements IOwnership
                 for (let item of datas) {
                     hDatas.rows.push(item);
                 }
-                model.refresh(false);
+                model.refresh(false);                done = true;
 
             }
         }
