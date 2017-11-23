@@ -30,6 +30,10 @@ public class MyConfiguration extends org.colorcoding.ibas.bobas.MyConfiguration 
 	 */
 	public static final String NAMESPACE_SERVICE = NAMESPACE_ROOT + "service";
 	/**
+	 * 配置项目-文件文件夹
+	 */
+	public final static String CONFIG_ITEM_ORGANIZEDROLES_FILE_FOLDER = "ORFileFolder";
+	/**
 	 * 配置项目-组织缓存刷新时间
 	 */
 	public final static String CONFIG_ITEM_ORGANIZATION_REFRESH_TIME = "OrgRefreshTime";
