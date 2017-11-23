@@ -7,7 +7,11 @@
  */
 
 import * as ibas from "ibas/index";
-import { OrganizationalStructureFunc, OrganizationalStructureChooseServiceMapping, OrganizationalStructureLinkServiceMapping } from "./organizationalstructure/index";
+import {
+    OrganizationalStructureFunc,
+    OrganizationalStructureChooseServiceMapping,
+    OrganizationalStructureLinkServiceMapping
+} from "./organizationalstructure/index";
 import { OwnershipFunc, OwnershipChooseServiceMapping, OwnershipLinkServiceMapping } from "./ownership/index";
 import { RoleFunc, RoleChooseServiceMapping, RoleLinkServiceMapping } from "./role/index";
 
@@ -17,11 +21,14 @@ export class Console extends ibas.ModuleConsole {
     static CONSOLE_ID: string = "18199a3e-29a7-4d43-ab4b-4de5454eb0a4";
     /** 模块-名称 */
     static CONSOLE_NAME: string = "OrganizedRoles";
+    /** 模块-版本 */
+    static CONSOLE_VERSION: string = "0.1.0";
     /** 构造函数 */
     constructor() {
         super();
         this.id = Console.CONSOLE_ID;
         this.name = Console.CONSOLE_NAME;
+        this.version = Console.CONSOLE_VERSION;
     }
     private _navigation: ibas.IViewNavigation;
     /** 创建视图导航 */
