@@ -8,13 +8,26 @@
 
 import {
     FetchCaller,
-    SaveCaller
+    SaveCaller,
+    UploadFileCaller,
+    DownloadFileCaller,
+    FileData
 } from "ibas/index";
 import * as bo from "./bo/index"
 
 /** 业务仓库 */
 export interface IBORepositoryOrganizedRoles {
 
+    /**
+     * 上传文件
+     * @param caller 调用者
+     */
+    upload(caller: UploadFileCaller<FileData>);
+    /**
+     * 下载文件
+     * @param caller 调用者
+     */
+    download(caller: DownloadFileCaller<Blob>);
     /**
      * 查询 组织-结构
      * @param fetcher 查询者
