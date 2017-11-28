@@ -19,6 +19,7 @@ import {
     BODocumentLine,
     BOSimple,
     BOSimpleLine,
+    config,
 } from "ibas/index";
 import {
     IOrganizationalStructure,
@@ -252,7 +253,7 @@ export class OrganizationalStructure extends BOSimple<OrganizationalStructure> i
     /** 初始化数据 */
     protected init(): void {
         this.organizationalRoles = new OrganizationalRoles(this);
-        this.objectCode = OrganizationalStructure.BUSINESS_OBJECT_CODE;
+        this.objectCode = config.applyVariables(OrganizationalStructure.BUSINESS_OBJECT_CODE);
     }
 }
 

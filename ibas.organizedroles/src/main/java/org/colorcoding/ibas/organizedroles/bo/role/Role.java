@@ -38,12 +38,12 @@ public class Role extends BusinessObject<Role> implements IRole {
 	/**
 	 * 数据库表
 	 */
-	public static final String DB_TABLE_NAME = "CC_OR_ROLE";
+	public static final String DB_TABLE_NAME = "${Company}_OR_ROLE";
 
 	/**
 	 * 业务对象编码
 	 */
-	public static final String BUSINESS_OBJECT_CODE = "CC_OR_ROLE";
+	public static final String BUSINESS_OBJECT_CODE = "${Company}_OR_ROLE";
 
 	/**
 	 * 业务对象名称
@@ -568,7 +568,7 @@ public class Role extends BusinessObject<Role> implements IRole {
 	@Override
 	protected void initialize() {
 		super.initialize();// 基类初始化，不可去除
-		this.setObjectCode(BUSINESS_OBJECT_CODE);
+		this.setObjectCode(MyConfiguration.applyVariables(BUSINESS_OBJECT_CODE));
 		this.setActivated(emYesNo.YES);
 
 	}

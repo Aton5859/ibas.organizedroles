@@ -19,6 +19,7 @@ import {
     BODocumentLine,
     BOSimple,
     BOSimpleLine,
+    config,
 } from "ibas/index";
 import {
     IRole,
@@ -214,7 +215,7 @@ export class Role extends BOMasterData<Role> implements IRole {
 
     /** 初始化数据 */
     protected init(): void {
-        this.objectCode = Role.BUSINESS_OBJECT_CODE;
+        this.objectCode = config.applyVariables(Role.BUSINESS_OBJECT_CODE);
     }
 }
 
