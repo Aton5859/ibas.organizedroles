@@ -1,5 +1,5 @@
 {
-  "organizedroles": "${Domain.getDescription()}",
+  "organizedroles": "角色组织",
   "organizedroles_icon": "",
   "organizedroles_func_organizationalstructure": "组织-结构",
   "organizedroles_app_organizationalstructure_list": "组织-结构列表",

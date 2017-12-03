@@ -51,6 +51,7 @@ export class Console extends ibas.ModuleConsole {
     run(): void {
         // 加载语言-框架默认
         ibas.i18n.load(this.rootUrl + "resources/languages/organizedroles.json");
+        ibas.i18n.load(this.rootUrl + "resources/languages/enums.json");
         ibas.i18n.load(this.rootUrl + "resources/languages/bo/organizationalstructure.json");
         ibas.i18n.load(this.rootUrl + "resources/languages/bo/ownership.json");
         ibas.i18n.load(this.rootUrl + "resources/languages/bo/role.json");
