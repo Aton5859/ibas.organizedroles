@@ -17,7 +17,7 @@ export class RoleViewApp extends ibas.BOViewService<IRoleViewView> {
     /** 应用标识 */
     static APPLICATION_ID: string = "3b6dff76-8668-41d1-98c7-ed987aa08ac0";
     /** 应用名称 */
-    static APPLICATION_NAME: string = "initialfantasy_app_role_view";
+    static APPLICATION_NAME: string = "organizedroles_app_role_view";
     /** 业务对象编码 */
     static BUSINESS_OBJECT_CODE: string = bo.Role.BUSINESS_OBJECT_CODE;
     /** 构造函数 */

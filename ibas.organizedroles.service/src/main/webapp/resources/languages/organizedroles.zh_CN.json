@@ -1,6 +1,6 @@
 {
   "organizedroles": "角色组织",
-  "organizedroles_icon": "",
+  "organizedroles_icon": "sap-icon://manager",
   "organizedroles_func_organizationalstructure": "组织-结构",
   "organizedroles_app_organizationalstructure_list": "组织-结构列表",
   "organizedroles_app_organizationalstructure_choose": "组织-结构选择",

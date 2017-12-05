@@ -16,7 +16,7 @@ export class RoleEditApp extends ibas.BOEditApplication<IRoleEditView, bo.Role> 
     /** 应用标识 */
     static APPLICATION_ID: string = "31807051-f246-4cb0-a121-ba5e341f9836";
     /** 应用名称 */
-    static APPLICATION_NAME: string = "initialfantasy_app_role_edit";
+    static APPLICATION_NAME: string = "organizedroles_app_role_edit";
     /** 业务对象编码 */
     static BUSINESS_OBJECT_CODE: string = bo.Role.BUSINESS_OBJECT_CODE;
     /** 构造函数 */

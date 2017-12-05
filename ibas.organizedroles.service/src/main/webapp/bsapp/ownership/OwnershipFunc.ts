@@ -14,7 +14,7 @@ export class OwnershipFunc extends ibas.ModuleFunction {
     /** 功能标识 */
     static FUNCTION_ID = "afbca7d1-e8e9-4a80-8521-1d2e20bab0ac";
     /** 功能名称 */
-    static FUNCTION_NAME = "initialfantasy_func_ownership";
+    static FUNCTION_NAME = "organizedroles_func_ownership";
     /** 构造函数 */
     constructor() {
         super();

@@ -17,7 +17,7 @@ export class OrganizationalStructureEditApp extends ibas.BOEditApplication<IOrga
     /** 应用标识 */
     static APPLICATION_ID: string = "2f18a84b-3756-429d-bc2c-607d5e633e21";
     /** 应用名称 */
-    static APPLICATION_NAME: string = "initialfantasy_app_organizationalstructure_edit";
+    static APPLICATION_NAME: string = "organizedroles_app_organizationalstructure_edit";
     /** 业务对象编码 */
     static BUSINESS_OBJECT_CODE: string = bo.OrganizationalStructure.BUSINESS_OBJECT_CODE;
     /** 构造函数 */

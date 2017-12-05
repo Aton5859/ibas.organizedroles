@@ -16,7 +16,7 @@ export class OwnershipEditApp extends ibas.BOEditApplication<IOwnershipEditView,
     /** 应用标识 */
     static APPLICATION_ID: string = "20c7ceee-574e-4a41-af28-b1c665f4ad71";
     /** 应用名称 */
-    static APPLICATION_NAME: string = "initialfantasy_app_ownership_edit";
+    static APPLICATION_NAME: string = "organizedroles_app_ownership_edit";
     /** 业务对象编码 */
     static BUSINESS_OBJECT_CODE: string = bo.Ownership.BUSINESS_OBJECT_CODE;
     /** 构造函数 */

@@ -17,7 +17,7 @@ export class OrganizationalStructureChooseApp extends ibas.BOChooseService<IOrga
     /** 应用标识 */
     static APPLICATION_ID: string = "f1e8ebcf-311d-4a9e-b088-34d230e537c7";
     /** 应用名称 */
-    static APPLICATION_NAME: string = "initialfantasy_app_organizationalstructure_choose";
+    static APPLICATION_NAME: string = "organizedroles_app_organizationalstructure_choose";
     /** 业务对象编码 */
     static BUSINESS_OBJECT_CODE: string = bo.OrganizationalStructure.BUSINESS_OBJECT_CODE;
     /** 构造函数 */

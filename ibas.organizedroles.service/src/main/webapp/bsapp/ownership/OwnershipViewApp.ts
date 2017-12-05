@@ -17,7 +17,7 @@ export class OwnershipViewApp extends ibas.BOViewService<IOwnershipViewView> {
     /** 应用标识 */
     static APPLICATION_ID: string = "aa512ef3-3272-4570-83dd-6b40bc43dac4";
     /** 应用名称 */
-    static APPLICATION_NAME: string = "initialfantasy_app_ownership_view";
+    static APPLICATION_NAME: string = "organizedroles_app_ownership_view";
     /** 业务对象编码 */
     static BUSINESS_OBJECT_CODE: string = bo.Ownership.BUSINESS_OBJECT_CODE;
     /** 构造函数 */

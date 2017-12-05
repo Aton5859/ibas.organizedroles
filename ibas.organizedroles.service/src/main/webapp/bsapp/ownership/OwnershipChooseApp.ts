@@ -17,7 +17,7 @@ export class OwnershipChooseApp extends ibas.BOChooseService<IOwnershipChooseVie
     /** 应用标识 */
     static APPLICATION_ID: string = "4b51686e-30bc-4e28-b632-07f2dec1bc99";
     /** 应用名称 */
-    static APPLICATION_NAME: string = "initialfantasy_app_ownership_choose";
+    static APPLICATION_NAME: string = "organizedroles_app_ownership_choose";
     /** 业务对象编码 */
     static BUSINESS_OBJECT_CODE: string = bo.Ownership.BUSINESS_OBJECT_CODE;
     /** 构造函数 */

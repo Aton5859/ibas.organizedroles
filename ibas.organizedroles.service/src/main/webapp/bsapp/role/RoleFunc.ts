@@ -14,7 +14,7 @@ export class RoleFunc extends ibas.ModuleFunction {
     /** 功能标识 */
     static FUNCTION_ID = "3d4fb37b-db32-4e34-b845-c91f2185f31c";
     /** 功能名称 */
-    static FUNCTION_NAME = "initialfantasy_func_role";
+    static FUNCTION_NAME = "organizedroles_func_role";
     /** 构造函数 */
     constructor() {
         super();
