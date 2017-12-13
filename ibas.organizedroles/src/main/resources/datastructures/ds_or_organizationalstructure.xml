@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-
+<!DOCTYPE Domain>
 <Domain Name="OrganizedRoles" ShortName="OR">
   <Model Name="OrganizationalStructure" Description="组织-结构" ModelType="Simple" Mapped="${Company}_OR_ORGSTRC">
     <Property Name="Organization" Description="组织" DataType="Alphanumeric" DataSubType="Default" EditSize="8" Mapped="OrgCode"/>

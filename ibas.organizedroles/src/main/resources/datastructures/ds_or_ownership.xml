@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-
+<!DOCTYPE Domain>
 <Domain Name="OrganizedRoles" ShortName="OR">
   <Model Name="Ownership" Description="数据权限" ModelType="Simple" Mapped="${Company}_OR_OWNERSHIP">
     <Property Name="UserCode" Description="用户编码" DataType="Alphanumeric" DataSubType="Default" EditSize="8" Mapped="UserCode" UniqueKey="Yes"/>
