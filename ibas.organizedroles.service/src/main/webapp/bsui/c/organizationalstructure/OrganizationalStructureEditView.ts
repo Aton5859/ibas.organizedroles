@@ -108,7 +108,7 @@ export class OrganizationalStructureEditView extends ibas.BOEditView implements 
         });
         this.form.addContent(new sap.ui.core.Title("", { text: ibas.i18n.prop("bo_organizationalrole") }));
         this.tableOrganizationalRole = new sap.ui.table.Table("", {
-            extension: new sap.m.Toolbar("", {
+            toolbar: new sap.m.Toolbar("", {
                 content: [
                     new sap.m.Button("", {
                         text: ibas.i18n.prop("shell_data_add"),
@@ -132,6 +132,7 @@ export class OrganizationalStructureEditView extends ibas.BOEditView implements 
                 ]
             }),
             enableSelectAll: false,
+            selectionBehavior: sap.ui.table.SelectionBehavior.Row,
             // selectionMode: sap.ui.table.SelectionMode.Single,
             visibleRowCount: 5,
             rows: "{/rows}",
@@ -161,7 +162,7 @@ export class OrganizationalStructureEditView extends ibas.BOEditView implements 
         this.form.addContent(this.tableOrganizationalRole);
         this.form.addContent(new sap.ui.core.Title("", { text: ibas.i18n.prop("bo_rolemember") }));
         this.tableRoleMember = new sap.ui.table.Table("", {
-            extension: new sap.m.Toolbar("", {
+            toolbar: new sap.m.Toolbar("", {
                 content: [
                     new sap.m.Button("", {
                         text: ibas.i18n.prop("shell_data_add"),
@@ -184,6 +185,7 @@ export class OrganizationalStructureEditView extends ibas.BOEditView implements 
                 ]
             }),
             enableSelectAll: false,
+            selectionBehavior: sap.ui.table.SelectionBehavior.Row,
             visibleRowCount: 5,
             rows: "{/rows}",
             columns: [
