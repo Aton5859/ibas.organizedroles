@@ -49,7 +49,7 @@ export class OrganizationalStructureViewApp extends ibas.BOViewService<IOrganiza
     run(): void;
     run(data: bo.OrganizationalStructure): void;
     run(): void {
-        if (!(arguments[0] instanceof bo.OrganizationalStructure)) {
+        if (ibas.objects.instanceOf(arguments[0], bo.OrganizationalStructure)) {
             this.viewData = arguments[0];
             this.show();
         } else {
@@ -102,7 +102,7 @@ export class OrganizationalStructureLinkServiceMapping extends ibas.BOLinkServic
         this.boCode = OrganizationalStructureViewApp.BUSINESS_OBJECT_CODE;
         this.description = ibas.i18n.prop(this.name);
     }
-    /** 创建服务并运行 */
+    /** 创建服务实例 */
     create(): ibas.IService<ibas.IBOLinkServiceCaller> {
         return new OrganizationalStructureViewApp();
     }

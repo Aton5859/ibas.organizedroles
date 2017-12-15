@@ -49,7 +49,7 @@ export class OwnershipViewApp extends ibas.BOViewService<IOwnershipViewView> {
     run(): void;
     run(data: bo.Ownership): void;
     run(): void {
-        if (!(arguments[0] instanceof bo.Ownership)) {
+        if (ibas.objects.instanceOf(arguments[0], bo.Ownership)) {
             this.viewData = arguments[0];
             this.show();
         } else {
@@ -102,7 +102,7 @@ export class OwnershipLinkServiceMapping extends ibas.BOLinkServiceMapping {
         this.boCode = OwnershipViewApp.BUSINESS_OBJECT_CODE;
         this.description = ibas.i18n.prop(this.name);
     }
-    /** 创建服务并运行 */
+    /** 创建服务实例 */
     create(): ibas.IService<ibas.IBOLinkServiceCaller> {
         return new OwnershipViewApp();
     }

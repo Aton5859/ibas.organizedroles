@@ -49,7 +49,7 @@ export class RoleViewApp extends ibas.BOViewService<IRoleViewView> {
     run(): void;
     run(data: bo.Role): void;
     run(): void {
-        if (!(arguments[0] instanceof bo.Role)) {
+        if (ibas.objects.instanceOf(arguments[0], bo.Role)) {
             this.viewData = arguments[0];
             this.show();
         } else {
@@ -102,7 +102,7 @@ export class RoleLinkServiceMapping extends ibas.BOLinkServiceMapping {
         this.boCode = RoleViewApp.BUSINESS_OBJECT_CODE;
         this.description = ibas.i18n.prop(this.name);
     }
-    /** 创建服务并运行 */
+    /** 创建服务实例 */
     create(): ibas.IService<ibas.IBOLinkServiceCaller> {
         return new RoleViewApp();
     }
