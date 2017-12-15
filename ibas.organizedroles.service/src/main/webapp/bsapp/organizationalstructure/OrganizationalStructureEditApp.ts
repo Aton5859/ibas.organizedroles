@@ -57,7 +57,9 @@ export class OrganizationalStructureEditApp extends ibas.BOEditApplication<IOrga
         this.view.showOrganizationalRoles(this.editData.organizationalRoles.filterDeleted());
     }
     /** 运行,覆盖原方法 */
-    run(...args: any[]): void {
+    run(): void;
+    run(data: bo.OrganizationalStructure): void;
+    run(): void {
         let that: this = this;
         if (ibas.objects.instanceOf(arguments[0], bo.OrganizationalStructure)) {
             // 尝试重新查询编辑对象
@@ -92,7 +94,7 @@ export class OrganizationalStructureEditApp extends ibas.BOEditApplication<IOrga
                 return;
             }
         }
-        super.run.apply(this, args);
+        super.run.apply(this, arguments);
     }
     /** 待编辑的数据 */
     protected editData: bo.OrganizationalStructure;
@@ -254,7 +256,6 @@ export class OrganizationalStructureEditApp extends ibas.BOEditApplication<IOrga
     chooseOrganizationalRole(caller: bo.OrganizationalRole): void {
         let that: this = this;
         ibas.servicesManager.runChooseService<bo.Role>({
-            caller: caller,
             boCode: bo.Role.BUSINESS_OBJECT_CODE,
             criteria: [
                 new ibas.Condition(bo.Role.PROPERTY_ACTIVATED_NAME, ibas.emConditionOperation.EQUAL, "Y")
@@ -338,7 +339,6 @@ export class OrganizationalStructureEditApp extends ibas.BOEditApplication<IOrga
     choooseRoleMember(caller: bo.RoleMember): void {
         let that: this = this;
         ibas.servicesManager.runChooseService<ia.IUser>({
-            caller: caller,
             boCode: ia.BO_CODE_USER,
             criteria: [
                 new ibas.Condition("activated", ibas.emConditionOperation.EQUAL, "Y")
