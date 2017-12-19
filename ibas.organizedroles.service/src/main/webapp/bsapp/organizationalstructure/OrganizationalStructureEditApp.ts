@@ -8,7 +8,7 @@
 
 import * as ibas from "ibas/index";
 import * as bo from "../../borep/bo/index";
-import * as ia from "../../3rdparty/initialfantasy/index";
+import * as ia from "3rdparty/initialfantasy/index";
 import { BORepositoryOrganizedRoles } from "../../borep/BORepositories";
 
 /** 应用-组织-结构 */
