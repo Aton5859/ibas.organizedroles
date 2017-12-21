@@ -79,13 +79,11 @@ export class OrganizationalStructureEditView extends ibas.BOEditView implements 
                 }),
                 new sap.m.Label("", { text: ibas.i18n.prop("bo_organizationalstructure_validdate") }),
                 new sap.m.DatePicker("", {
-                    valueFormat: "yyyy-MM-dd",
                 }).bindProperty("dateValue", {
                     path: "/validDate"
                 }),
                 new sap.m.Label("", { text: ibas.i18n.prop("bo_organizationalstructure_invaliddate") }),
                 new sap.m.DatePicker("", {
-                    valueFormat: "yyyy-MM-dd",
                 }).bindProperty("dateValue", {
                     path: "/invalidDate"
                 }),
