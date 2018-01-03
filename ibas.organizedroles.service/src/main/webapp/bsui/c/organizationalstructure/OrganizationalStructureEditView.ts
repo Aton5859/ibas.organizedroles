@@ -123,7 +123,7 @@ export class OrganizationalStructureEditView extends ibas.BOEditView implements 
                         press: function (): void {
                             that.fireViewEvents(that.removeOrganizationalRoleEvent,
                                 // 获取表格选中的对象
-                                openui5.utils.getTableSelecteds<bo.OrganizationalRole>(that.tableOrganizationalRole)
+                                openui5.utils.getSelecteds<bo.OrganizationalRole>(that.tableOrganizationalRole)
                             );
                         }
                     })
@@ -153,7 +153,7 @@ export class OrganizationalStructureEditView extends ibas.BOEditView implements 
             ],
             rowSelectionChange: function (): void {
                 that.fireViewEvents(that.selectedOrganizationalRoleEvent,
-                    openui5.utils.getTableSelecteds<bo.RoleMember>(that.tableOrganizationalRole).firstOrDefault()
+                    openui5.utils.getSelecteds<bo.RoleMember>(that.tableOrganizationalRole).firstOrDefault()
                 );
             }
         });
@@ -176,7 +176,7 @@ export class OrganizationalStructureEditView extends ibas.BOEditView implements 
                         icon: "sap-icon://less",
                         press: function (): void {
                             that.fireViewEvents(that.removeRoleMemberEvent,
-                                openui5.utils.getTableSelecteds<bo.RoleMember>(that.tableRoleMember)
+                                openui5.utils.getSelecteds<bo.RoleMember>(that.tableRoleMember)
                             );
                         }
                     })
