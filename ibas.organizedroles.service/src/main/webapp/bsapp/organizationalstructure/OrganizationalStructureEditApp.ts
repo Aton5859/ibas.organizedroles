@@ -222,7 +222,7 @@ export class OrganizationalStructureEditApp extends ibas.BOEditApplication<IOrga
         ibas.servicesManager.runChooseService<ia.IOrganization>({
             boCode: ia.BO_CODE_ORGANIZATION,
             criteria: [
-                new ibas.Condition("activated", ibas.emConditionOperation.EQUAL, "Y")
+                new ibas.Condition("activated", ibas.emConditionOperation.EQUAL, ibas.emYesNo.YES)
             ],
             onCompleted(selecteds: ibas.List<ia.IOrganization>): void {
                 that.editData.organization = selecteds.firstOrDefault().code;
@@ -252,7 +252,7 @@ export class OrganizationalStructureEditApp extends ibas.BOEditApplication<IOrga
         ibas.servicesManager.runChooseService<ia.IUser>({
             boCode: ia.BO_CODE_USER,
             criteria: [
-                new ibas.Condition("activated", ibas.emConditionOperation.EQUAL, "Y")
+                new ibas.Condition("activated", ibas.emConditionOperation.EQUAL, ibas.emYesNo.YES)
             ],
             onCompleted(selecteds: ibas.List<ia.IUser>): void {
                 that.editData.manager = selecteds.firstOrDefault().code;
@@ -265,7 +265,7 @@ export class OrganizationalStructureEditApp extends ibas.BOEditApplication<IOrga
         ibas.servicesManager.runChooseService<bo.Role>({
             boCode: bo.Role.BUSINESS_OBJECT_CODE,
             criteria: [
-                new ibas.Condition(bo.Role.PROPERTY_ACTIVATED_NAME, ibas.emConditionOperation.EQUAL, "Y")
+                new ibas.Condition(bo.Role.PROPERTY_ACTIVATED_NAME, ibas.emConditionOperation.EQUAL, ibas.emYesNo.YES)
             ],
             onCompleted(selecteds: ibas.List<bo.Role>): void {
                 // 获取触发的对象
@@ -348,7 +348,7 @@ export class OrganizationalStructureEditApp extends ibas.BOEditApplication<IOrga
         ibas.servicesManager.runChooseService<ia.IUser>({
             boCode: ia.BO_CODE_USER,
             criteria: [
-                new ibas.Condition("activated", ibas.emConditionOperation.EQUAL, "Y")
+                new ibas.Condition("activated", ibas.emConditionOperation.EQUAL, ibas.emYesNo.YES)
             ],
             onCompleted(selecteds: ibas.List<ia.IUser>): void {
                 // 获取触发的对象
