@@ -46,7 +46,7 @@ export class OrganizationalStructureEditView extends ibas.BOEditView implements 
         this.form = new sap.ui.layout.form.SimpleForm("", {
             editable:true,
             content: [
-                new sap.ui.core.Title("", { text: ibas.i18n.prop("initialfantasy_general_information") }),
+                new sap.ui.core.Title("", { text: ibas.i18n.prop("initialfantasy_title_general") }),
                 new sap.m.Label("", { text: ibas.i18n.prop("bo_organizationalstructure_organization") }),
                 new sap.m.Input("", {
                     type: sap.m.InputType.Text,
@@ -87,7 +87,7 @@ export class OrganizationalStructureEditView extends ibas.BOEditView implements 
                 }).bindProperty("dateValue", {
                     path: "/invalidDate"
                 }),
-                new sap.ui.core.Title("", { text: ibas.i18n.prop("initialfantasy_other_information") }),
+                new sap.ui.core.Title("", { text: ibas.i18n.prop("initialfantasy_title_others") }),
                 new sap.m.Label("", { text: ibas.i18n.prop("bo_organizationalstructure_objectkey") }),
                 new sap.m.Input("", {
                     enabled: false,
