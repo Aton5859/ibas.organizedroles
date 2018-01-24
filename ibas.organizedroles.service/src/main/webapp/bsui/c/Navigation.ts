@@ -32,9 +32,6 @@ export default class Navigation extends ibas.ViewNavigation {
             case organizationalstructureApps.OrganizationalStructureChooseApp.APPLICATION_ID:
                 view = new organizationalstructureViews.OrganizationalStructureChooseView();
                 break;
-            case organizationalstructureApps.OrganizationalStructureViewApp.APPLICATION_ID:
-                view = new organizationalstructureViews.OrganizationalStructureViewView();
-                break;
             case organizationalstructureApps.OrganizationalStructureEditApp.APPLICATION_ID:
                 view = new organizationalstructureViews.OrganizationalStructureEditView();
                 break;
@@ -44,9 +41,6 @@ export default class Navigation extends ibas.ViewNavigation {
             case ownershipApps.OwnershipChooseApp.APPLICATION_ID:
                 view = new ownershipViews.OwnershipChooseView();
                 break;
-            case ownershipApps.OwnershipViewApp.APPLICATION_ID:
-                view = new ownershipViews.OwnershipViewView();
-                break;
             case ownershipApps.OwnershipEditApp.APPLICATION_ID:
                 view = new ownershipViews.OwnershipEditView();
                 break;
@@ -55,9 +49,6 @@ export default class Navigation extends ibas.ViewNavigation {
                 break;
             case roleApps.RoleChooseApp.APPLICATION_ID:
                 view = new roleViews.RoleChooseView();
-                break;
-            case roleApps.RoleViewApp.APPLICATION_ID:
-                view = new roleViews.RoleViewView();
                 break;
             case roleApps.RoleEditApp.APPLICATION_ID:
                 view = new roleViews.RoleEditView();

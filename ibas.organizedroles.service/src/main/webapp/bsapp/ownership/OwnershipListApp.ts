@@ -10,7 +10,6 @@ import * as ibas from "ibas/index";
 import * as bo from "../../borep/bo/index";
 import { BORepositoryOrganizedRoles } from "../../borep/BORepositories";
 import { DataConverter4or } from "../../borep/DataConverters";
-import { OwnershipViewApp } from "./OwnershipViewApp";
 import { OwnershipEditApp } from "./OwnershipEditApp";
 
 /** 列表应用-数据权限 */
@@ -81,11 +80,6 @@ export class OwnershipListApp extends ibas.BOListApplication<IOwnershipListView,
             ));
             return;
         }
-        let app: OwnershipViewApp = new OwnershipViewApp();
-        app.navigation = this.navigation;
-        app.viewShower = this.viewShower;
-        app.run(data);
-
     }
     /** 编辑数据，参数：目标数据 */
     protected editData(data: bo.Ownership): void {

@@ -10,5 +10,4 @@
 export * from "./OrganizationalStructureFunc";
 export * from "./OrganizationalStructureListApp";
 export * from "./OrganizationalStructureChooseApp";
-export * from "./OrganizationalStructureViewApp";
 export * from "./OrganizationalStructureEditApp";

@@ -10,7 +10,6 @@ import * as ibas from "ibas/index";
 import * as bo from "../../borep/bo/index";
 import { BORepositoryOrganizedRoles } from "../../borep/BORepositories";
 import { DataConverter4or } from "../../borep/DataConverters";
-import { RoleViewApp } from "./RoleViewApp";
 import { RoleEditApp } from "./RoleEditApp";
 
 /** 列表应用-角色 */
@@ -81,11 +80,6 @@ export class RoleListApp extends ibas.BOListApplication<IRoleListView, bo.Role> 
             ));
             return;
         }
-        let app: RoleViewApp = new RoleViewApp();
-        app.navigation = this.navigation;
-        app.viewShower = this.viewShower;
-        app.run(data);
-
     }
     /** 编辑数据，参数：目标数据 */
     protected editData(data: bo.Role): void {

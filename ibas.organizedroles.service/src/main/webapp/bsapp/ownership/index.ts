@@ -10,5 +10,4 @@
 export * from "./OwnershipFunc";
 export * from "./OwnershipListApp";
 export * from "./OwnershipChooseApp";
-export * from "./OwnershipViewApp";
 export * from "./OwnershipEditApp";

@@ -11,10 +11,9 @@ import { CONSOLE_ID, CONSOLE_NAME, CONSOLE_VERSION } from "../api/index";
 import {
     OrganizationalStructureFunc,
     OrganizationalStructureChooseServiceMapping,
-    OrganizationalStructureLinkServiceMapping
 } from "./organizationalstructure/index";
-import { OwnershipFunc, OwnershipChooseServiceMapping, OwnershipLinkServiceMapping } from "./ownership/index";
-import { RoleFunc, RoleChooseServiceMapping, RoleLinkServiceMapping } from "./role/index";
+import { OwnershipFunc, OwnershipChooseServiceMapping, } from "./ownership/index";
+import { RoleFunc, RoleChooseServiceMapping, } from "./role/index";
 
 /** 模块控制台 */
 export class Console extends ibas.ModuleConsole {
@@ -39,11 +38,8 @@ export class Console extends ibas.ModuleConsole {
         this.register(new RoleFunc());
         // 注册服务应用
         this.register(new OrganizationalStructureChooseServiceMapping());
-        this.register(new OrganizationalStructureLinkServiceMapping());
         this.register(new OwnershipChooseServiceMapping());
-        this.register(new OwnershipLinkServiceMapping());
         this.register(new RoleChooseServiceMapping());
-        this.register(new RoleLinkServiceMapping());
         // 注册常驻应用
 
     }

@@ -10,5 +10,4 @@
 export * from "./RoleFunc";
 export * from "./RoleListApp";
 export * from "./RoleChooseApp";
-export * from "./RoleViewApp";
 export * from "./RoleEditApp";
