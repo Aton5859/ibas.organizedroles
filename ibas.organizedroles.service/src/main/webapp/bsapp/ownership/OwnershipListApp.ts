@@ -9,7 +9,7 @@
 import * as ibas from "ibas/index";
 import * as bo from "../../borep/bo/index";
 import { BORepositoryOrganizedRoles } from "../../borep/BORepositories";
-import { DataConverter4or } from "../../borep/DataConverters";
+import { DataConverter4OR } from "../../borep/DataConverters";
 import { OwnershipEditApp } from "./OwnershipEditApp";
 
 /** 列表应用-数据权限 */
@@ -173,7 +173,7 @@ export class OwnershipListApp extends ibas.BOListApplication<IOwnershipListView,
         return [
             new ibas.BOListServiceProxy({
                 data: this.view.getSelecteds(),
-                converter: new DataConverter4or(),
+                converter: new DataConverter4OR(),
             })
         ];
     }

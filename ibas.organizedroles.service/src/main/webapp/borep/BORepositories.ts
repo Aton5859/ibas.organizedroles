@@ -9,14 +9,14 @@
 import * as ibas from "ibas/index";
 import * as bo from "./bo/index";
 import { IBORepositoryOrganizedRoles, BO_REPOSITORY_ORGANIZEDROLES } from "../api/index";
-import { DataConverter4or } from "./DataConverters";
+import { DataConverter4OR } from "./DataConverters";
 
 /** 业务对象仓库 */
 export class BORepositoryOrganizedRoles extends ibas.BORepositoryApplication implements IBORepositoryOrganizedRoles {
 
     /** 创建此模块的后端与前端数据的转换者 */
     protected createConverter(): ibas.IDataConverter {
-        return new DataConverter4or;
+        return new DataConverter4OR;
     }
 
     /**
