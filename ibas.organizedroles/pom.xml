@@ -9,10 +9,10 @@
     <artifactId>ibas.organizedroles</artifactId>
     <packaging>jar</packaging>
     <name>ibas.organizedroles</name>
-    <url>http://colorcoding.org/ibas/organizedroles/</url>
+    <url>https://colorcoding.org/ibas/organizedroles/</url>
     <organization>
-        <name>colorcoding</name>
-        <url>http://colorcoding.org</url>
+        <name>Color-Coding Studio</name>
+        <url>https://colorcoding.org</url>
     </organization>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
